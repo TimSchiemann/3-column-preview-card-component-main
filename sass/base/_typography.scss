@@ -1,0 +1,12 @@
+@use "../utilities" as *;
+
+$font-size-default: 15px;
+
+body {
+    font-size: $font-size-default;
+
+    p {
+        color: $color-transparent-white;
+    }
+}
+

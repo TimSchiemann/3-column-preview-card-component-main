@@ -1,0 +1,17 @@
+@use '../utilities';
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cards-container {
+    margin: 5vh 2rem;
+    @include utilities.mobile {
+        display: flex;
+    }
+}
+

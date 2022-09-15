@@ -1,0 +1,71 @@
+// @use "../components";
+@use "../base";
+@use "../utilities" as *;
+
+$card-colors: (
+  "first": $color-orange,
+  "second": $color-dark-cyan,
+  "third": $color-verydark-cyan,
+);
+
+.card {
+  color: $color-transparent-white;
+  display: flex;
+  flex-direction: column;
+  padding: 3em;
+  gap: 2em;
+  font-family: 'Lexend Deca', sans-serif;
+  max-width: 300px;
+  p {
+    color: $color-transparent-white;
+    line-height: 1.5em;
+  }
+
+  h1 {
+    color: $color-verylight-gray;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+  }
+
+  img {
+    width: 3em;
+    height: 2em;
+  }
+
+  button {
+    margin-top: 4em;
+    max-width: 60%;
+  }
+
+  &:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+
+  @include mobile {
+    width: 100%;
+    &:first-child {
+      border-radius: 10px 0 0 10px;
+    }
+    &:last-child {
+      border-radius: 0 10px 10px 0px;
+    }
+  }
+}
+
+@each $name, $color in $card-colors {
+  .#{$name} {
+    background: $color;
+    button {
+        color: $color;
+        &:hover {
+          color: $color-verylight-gray;
+        }
+    }
+  }
+}

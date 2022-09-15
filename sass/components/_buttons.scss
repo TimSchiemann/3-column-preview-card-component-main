@@ -1,0 +1,15 @@
+@use "../base";
+@use "../utilities" as *;
+
+button {
+  background: $color-verylight-gray;
+  padding: 1em 1.5em;
+  border-radius: 999px;
+  border: 2px solid;
+  &:hover {
+    background-color: inherit;
+    border: 2px solid $color-verylight-gray;
+    cursor: pointer;
+    color: $color-verylight-gray;
+  }
+}
